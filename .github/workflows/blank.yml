@@ -8,8 +8,12 @@ on:
         type: string
         required: true
         default: ''
+      resourceGroupName:
+        type: string
+        required: true
+        default: ''
 
-run-name: 'deploy to ${{ inputs.subscriptionName }}'
+run-name: 'deploy to ${{ inputs.subscriptionName }} - ${{ inputs.resourceGroupName }}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
