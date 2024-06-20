@@ -17,7 +17,7 @@ on:
         required: true
         default: ''
 
-run-name: '${{ github.actor }} - deploy to ${{ inputs.subscriptionName }} - ${{ inputs.resourceType }} - ${{ steps.test.outputs.SELECTED_COLOR }}'
+run-name: '${{ github.actor }} - deploy to ${{ inputs.subscriptionName }} - ${{ inputs.resourceType }}'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -41,5 +41,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
-
